@@ -1,0 +1,48 @@
+div.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+
+}
+div.sregister{
+    background-color: rgb(0,0,0,0.5);
+    width: 100%;
+    border-radius: 10px;
+    border-radius: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px
+    rgba(0,0,0,0.3);
+    color:#fff;
+
+}
+form#sregister{
+    margin: 40px;
+}
+input#name{
+    width: 300px;
+    width: 100%;
+    border-radius: 3px;
+    border-radius: 1px solid #ddd;
+    box-shadow: 2px 2px 15px;
+    outline: 0;
+    padding: 7px;
+  box-shadow: inset 1px 1px 5px
+  rgba(0,0,0,0.3);
+
+    background-color:#fff;
+}
+input#submit{
+    width: 200px;
+    border-radius: 3px;
+    border: 1px solid;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px;
+    font-weight: 600;
+    background-color: rgba(250, 100, 0, 0.8);
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 7px;
+  box-shadow: inset 1px 1px 5px
+  rgba(0,0,0,0.3);
+
+    color:#fff;
+
+}

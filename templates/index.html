@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <title>PSX-Predictor</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/predictionstyle.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body class="main-layout">
+   
+    <div class="loader_bg">
+        <div class="loader"><img src="static/images/loading.gif" alt="" /></div>
+    </div>
+  
+    <header>
+        
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">PSX-Predictor</a>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </header>
+
+ 
+            {% if message %}
+                <div class="col-md-6 col-sm-3 output">
+                    <center>
+                      <h2> Predicted Close is {{ message }} </h2>
+
+                    </center>
+                </div> 
+            {% endif %}
+             
+          
+          <div class="main">
+            <div class="sregister">
+                <form action ="{{ url_for('index')}}"  method = "POST"> 
+                     
+                       <!-- <legend>Select Market and Secondary Indicator</legend>-->
+                       <br> 
+                       <label><h2>Select Stock </h2> </label><br>  
+            
+                        <select name="stockname" >
+                            <option value="AGTL">AGTL | AlGhazi Tractor Limited</option>
+                            <option value="HCAR">HCAR | Hunda Atlas Car Limited</option>
+                            <option value="ALTH">ALTH | Atlas Hunda Limited</option>
+                            <option value="HINO">HINO | Hino Pak Motors Limited</option>
+                            <option value="INDU">INDU | Indus Motor Limited</option>
+                            <option value="GHNL">GHNL | Ghandhara Nissan Limited</option>
+                            <option value="PSMC">PSMC | Pak Suzuki Motor Company Limited</option>
+
+                            <option value="MARI">MARI | Mari Petroleum Company Limited</option>
+                            <option value="POL">POL | Pakistan Oil Field Limited</option>
+                            <option value="OGDC">OGDC | Oil & Gas Development Company Limited</option>
+                            <option value="PPL">PPL | Pakistan Petroleum Limited</option>
+                          
+                     
+                    </select> 
+                    <hr>
+        <label for="indicator"><h2>Select Algorithm</h2></label><br>
+
+        <!-- <span class="hovertext" data-hover="linaer regressor model"> -->
+        <input type="checkbox" id="model1" class ="check" name="model" value="linear">
+        <label for="model1"> Linear Regression</label></span><br>
+        <!-- <span class="hovertext" data-hover="adaboost resgression model"> -->
+        <input type="checkbox" id="model2" class ="check" name="model" value="ada">
+        <label for="model2"> Adaboost Regression</label></span><br>
+        <!-- <span class="hovertext" data-hover="gradient boost regression model"> -->
+        <input type="checkbox" id="model3" class ="check" name="model" value="grad">
+        <label for="model3"> Gradientboost Regression</label></span><br>
+                        
+           <hr>            
+                <label for="indicator"><h2>Select Indicator</h2></label><br>
+
+                <span class="hovertext" data-hover="The Relative Strength Index (RSI), is a momentum oscillator that measures the speed and change of price movements.">
+                <input type="radio" id="indc1" name="indicator" value="RSI">
+                <label for="indc1"> RSI</label>
+                </span><br>
+                <span class="hovertext" data-hover="Exponential Moving Average (EMA) is used to measure trend direction over a period of time.EMA applies more weight to data that is more current.">
+                <input type="radio" id="indc2" name="indicator" value="EMA">
+                <label for="indc2"> EMA</label>
+                </span><br>
+                <span class="hovertext" data-hover="Moving average convergence/divergence is a trend-following momentum indicator that shows the relationship between two exponential moving averages (EMAs) of a security's price.">
+                <input type="radio" id="indc3" name="indicator" value="MACD">
+                <label for="indc3"> MACD</label></span><br>
+                <span class="hovertext" data-hover="On-balance volume (OBV) is a technical trading momentum indicator that uses volume flow to predict changes in stock price">
+                <input type="radio" id="indc4" name="indicator" value="OBV">
+                <label for="indc3"> OBV</label></span><br>
+                <span class="hovertext" data-hover="The Money Flow Index (MFI) is a technical oscillator that uses price and volume data for identifying overbought or oversold signals in an asset.">
+                <input type="radio" id="indc5" name="indicator" value="MFI">
+                <label for="indc3"> MFI</label></span><br>
+
+                <span class="hovertext" data-hover="Primary Indicator : Open, High, Low, Volume">
+                    <input type="radio" id="indc6" name="indicator" value="None">
+                    <label for="indc3"> None</label></span><br>
+
+
+                <center><input type="submit" value="Submit" name="submit" id="submit"> </center>
+
+                <br>
+                <br>
+
+            </form>  
+                
+                </div>
+          </div>
+
+              
+      <script src="static/js/jquery.min.js "></script>
+      <script src="static/js/bootstrap.bundle.min.js "></script>
+      <script src="static/js/jquery-3.0.0.min.js "></script>
+      <script src="static/js/custom.js "></script>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   </body>
+</html>
