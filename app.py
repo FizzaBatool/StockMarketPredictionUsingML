@@ -64,23 +64,23 @@ def index():
             # gradient boost
 
         elif (indicator=="RSI" and model =='grad'):
-            RSI_Value = str (RSIada(market))
+            RSI_Value = str (RSIgrad(market))
             message = RSI_Value    
      
         elif(indicator=="EMA" and model =='grad'):
-            EMA_Value = str (EMAada(market))
+            EMA_Value = str (EMAgrad(market))
             message=EMA_Value
 
         elif(indicator=="MACD" and model =='grad'):
-            MACD_Value = str (MACDada(market))
+            MACD_Value = str (MACDgrad(market))
             message= MACD_Value
         
         elif(indicator=="OBV" and model =='grad'):
-            OBV_Value = str (OBVada(market))
+            OBV_Value = str (OBVgrad(market))
             message= OBV_Value
 
         elif(indicator=="MFI" and model =='grad'):
-            MFI_Value = str (MFIada(market))
+            MFI_Value = str (MFIgrad(market))
             message= MFI_Value
 
         elif(indicator =="None"):
