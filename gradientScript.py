@@ -234,12 +234,11 @@ def MFIgrad(market):
     m = df['Close'].ewm(span=12, adjust=False, min_periods=12).mean()
     d = df['Close'].ewm(span=26, adjust=False, min_periods=26).mean()
     macd = m - d
-    df['MACD'] = df.index.map(macd)
+    df['MFI'] = df.index.map(macd)
     pd.set_option("display.max_columns", None)
 
     df['Close']=df['Close'].shift(-1)
 
-    df['Close']=df['Close'].shift(-1)
 
     XNopen=df.iloc[-1]['Open']
     XNhigh= df.iloc[-1]['High']
