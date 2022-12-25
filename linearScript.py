@@ -116,6 +116,14 @@ def EMAline(market):
     ynew = regression.predict(xnew)
 
     return ynew
+    plt.figure(figsize = (12,6))
+    plt.plot(data['Close'], label="Close")
+    plt.plot(wma10, label="10-Day WMA")
+    plt.plot(ema10, label="10-Day EMA")
+    plt.xlabel("Date")
+    plt.ylabel("Close")
+    plt.legend()
+    plt.show()
 
 def RSIline(market):
 
