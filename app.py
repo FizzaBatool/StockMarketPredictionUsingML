@@ -20,7 +20,7 @@ def index():
             # linear regressor
         
         if (indicator=="RSI" and model =='linear'):
-            RSI_Value = str (RSIline(market))
+            RSI_Value = str (EMAline(market))
             message = RSI_Value    
      
         elif(indicator=="EMA" and model =='linear'):
